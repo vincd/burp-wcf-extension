@@ -70,9 +70,7 @@ class JavaSerializeXMLInputTab(IMessageEditorTab):
                 bodyoffset = request_info.getBodyOffset()
                 body_bytes = content[bodyoffset:]
 
-                print 1
                 decoded_wcf_body = WCFBinaryHelper.DecodeWCF(self._extender, body_bytes)
-                print 2
                 xml_body = minidom.parseString(decoded_wcf_body)
 
                 if not isRequest:
